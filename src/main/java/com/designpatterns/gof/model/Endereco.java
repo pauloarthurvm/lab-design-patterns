@@ -3,8 +3,7 @@ package com.designpatterns.gof.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+// https://www.jsonschema2pojo.org/
 
 @Entity
 public class Endereco {
@@ -23,7 +22,6 @@ public class Endereco {
     private String gia;
     private String ddd;
     private String siafi;
-    private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
 
     public String getCep() {
         return cep;
@@ -127,14 +125,6 @@ public class Endereco {
 
     public void setSiafi(String siafi) {
         this.siafi = siafi;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }
